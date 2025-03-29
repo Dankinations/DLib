@@ -6,8 +6,6 @@
         sessionStorage.setItem(key, '1'); // Set instantly to prevent multiple alerts happening
         const message = "Ey so you don't have DLib enabled/downloaded, some userscripts use DLib and since you don't have DLib enabled, they  will break, please download/enable DLib :P";
 
-        console.log(window.BootstrapDialog)
-
         BootstrapDialog.show({
             title: 'Oh No!',
             type: BootstrapDialog.TYPE_WARNING,
