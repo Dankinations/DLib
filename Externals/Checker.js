@@ -22,7 +22,8 @@
                         label: 'Download DLib',
                         cssClass: 'btn-primary',
                         action(dialog) {
-                            open("https://github.com/Dankinations/DLib/releases/latest/download/DLib.user.js");
+                            //https://github.com/Dankinations/DLib/releases/latest/download/DLib.user.js
+                            open("https://youtube.com");
                         },
                     },
                     {
