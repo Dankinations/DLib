@@ -8,37 +8,58 @@
 
         console.log(window.BootstrapDialog)
 
-        if (1 == 0) {
-            console.log("hi")
-            SimpleToast({
-                title: 'Missing Requirements',
-                text: message,
-                footer: pluginName,
-            });
-        } else if (window.BootstrapDialog) {
-            BootstrapDialog.show({
-                title: 'Oh No!',
-                type: BootstrapDialog.TYPE_WARNING,
-                message,
-                buttons: [
-                    {
-                        label: 'Download DLib',
-                        cssClass: 'btn-primary',
-                        action(dialog) {
-                            open("https://github.com/Dankinations/DLib/releases/latest/download/DLib.user.js");
-                        },
+        BootstrapDialog.show({
+            title: 'Oh No!',
+            type: BootstrapDialog.TYPE_WARNING,
+            message,
+            buttons: [
+                {
+                    label: 'Download DLib',
+                    cssClass: 'btn-primary',
+                    action(dialog) {
+                        open("https://github.com/Dankinations/DLib/releases/latest/download/DLib.user.js");
                     },
-                    {
-                        label: 'Proceed Anyways',
-                        cssClass: 'btn-danger',
-                        action(dialog) {
-                            dialog.close();
-                        },
-                    }],
-            });
-        } else {
-            sessionStorage.removeItem(key)
-        }
+                },
+                {
+                    label: 'Proceed Anyways',
+                    cssClass: 'btn-danger',
+                    action(dialog) {
+                        dialog.close();
+                    },
+                }],
+        });
+
+        // if (1 == 0) {
+        //     console.log("hi")
+        //     SimpleToast({
+        //         title: 'Missing Requirements',
+        //         text: message,
+        //         footer: pluginName,
+        //     });
+        // } else if (window.BootstrapDialog) {
+        //     BootstrapDialog.show({
+        //         title: 'Oh No!',
+        //         type: BootstrapDialog.TYPE_WARNING,
+        //         message,
+        //         buttons: [
+        //             {
+        //                 label: 'Download DLib',
+        //                 cssClass: 'btn-primary',
+        //                 action(dialog) {
+        //                     open("https://github.com/Dankinations/DLib/releases/latest/download/DLib.user.js");
+        //                 },
+        //             },
+        //             {
+        //                 label: 'Proceed Anyways',
+        //                 cssClass: 'btn-danger',
+        //                 action(dialog) {
+        //                     dialog.close();
+        //                 },
+        //             }],
+        //     });
+        // } else {
+        //     sessionStorage.removeItem(key)
+        // }
     }
 
     throw new Error(`${pluginName}: DLib required`);
