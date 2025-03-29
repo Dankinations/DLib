@@ -1,10 +1,10 @@
 # DLib
 Adds a few things to [underscript](https://github.com/UCProjects/UnderScript) by [feildmaster](https://github.com/feildmaster)
 
-# Done:
+## Done:
 - NOTHING!!!!
 
-# Planning to add:
+## Planning to add:
 - Setting types
 - A "CreateCardInstance" function that creates a div depicting a card
 
