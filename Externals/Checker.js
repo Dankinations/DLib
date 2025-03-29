@@ -9,6 +9,7 @@
         console.log(window.BootstrapDialog)
 
         if (1 == 0) {
+            console.log("hi")
             SimpleToast({
                 title: 'Missing Requirements',
                 text: message,
